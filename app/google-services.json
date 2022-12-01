@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "698000084438",
+    "firebase_url": "https://tennis4us-a5fc6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tennis4us-a5fc6",
+    "storage_bucket": "tennis4us-a5fc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698000084438:android:31985ca7fb14971ad76877",
+        "android_client_info": {
+          "package_name": "com.example.tennis4us"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698000084438-mkjkau7qlm78s9o44114sh1g0pka92iv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tennis4us",
+            "certificate_hash": "00593c0e930bb00bf686f2ab400974c694cb64bf"
+          }
+        },
+        {
+          "client_id": "698000084438-v7aspt47o0q4db4ol4grrotm1trrsvvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUO1YO00OMqhnPoUAf9b1n8LTba4QlliE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698000084438-v7aspt47o0q4db4ol4grrotm1trrsvvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

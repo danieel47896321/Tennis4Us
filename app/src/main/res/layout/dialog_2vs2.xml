@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/Teams"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutPlayer1"
+            style="@style/TextInputLayout_Style"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:hint="@string/Player1"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:startIconDrawable="@drawable/person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextInputPlayer1"
+                style="@style/TextInputEditText_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutPlayer2"
+            style="@style/TextInputLayout_Style"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:hint="@string/Player2"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/person"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutPlayer1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextInputPlayer2"
+                style="@style/TextInputEditText_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutPlayer3"
+            style="@style/TextInputLayout_Style"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:hint="@string/Player3"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutPlayer2"
+            app:startIconDrawable="@drawable/person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextInputPlayer3"
+                style="@style/TextInputEditText_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutPlayer4"
+            style="@style/TextInputLayout_Style"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:hint="@string/Player4"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayoutPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutPlayer3"
+            app:startIconDrawable="@drawable/person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextInputPlayer4"
+                style="@style/TextInputEditText_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutGames"
+            style="@style/TextInputLayout_Style"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:hint="@string/Games"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutPlayer2"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayoutPlayer2"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutPlayer4"
+            app:startIconDrawable="@drawable/tennis">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextInputGames"
+                style="@style/TextInputEditText_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/ButtonOK"
+            style="@style/Button_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/OK"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayoutGames"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayoutGames"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutGames" />
+
+        <Button
+            android:id="@+id/ButtonCANCEL"
+            style="@style/Button_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/CANCEL"
+            app:layout_constraintEnd_toEndOf="@+id/ButtonOK"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ButtonOK"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonOK" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

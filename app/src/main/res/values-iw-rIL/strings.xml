@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tennis4Us</string>
+    <string name="Title">כותרת</string>
+    <string name="CreateAccount">צור חשבון</string>
+    <string name="SignIn">כניסה</string>
+    <string name="Email">אימייל</string>
+    <string name="Password">סיסמה</string>
+    <string name="ResetPasswordTitle" translatable="true">איפוס סיסמה</string>
+    <string name="ResetPassword" translatable="true">שכחת את הסיסמה? איפוס סיסמה</string>
+    <string name="FirstName">שם פרטי</string>
+    <string name="LastName">שם משפחה</string>
+    <string name="ConfirmPassword">אימות סיסמה</string>
+    <string name="Finish">סיום</string>
+    <string name="Required">חובה</string>
+    <string name="Loading">טוען</string>
+    <string name="MinimumChars">חובה מינימום 6 תווים</string>
+    <string name="InvalidEmail">אימייל לא תקין</string>
+    <string name="InvalidPassword">סיסמה לא תואמת</string>
+    <string name="EmailExist">האימייל כבר קיים במערכת</string>
+    <string name="ErrorMSG">משהו השתבש, אנא נסה שוב בעוד כמה דקות.</string>
+    <string name="Error">שגיאה</string>
+    <string name="OK">אישור</string>
+    <string name="CANCEL">ביטול</string>
+    <string name="CompleteCreateAccount">נרשמת בהצלחה, בבקשה אמת את חשבונך בעזרת קישור אימות שנשלח לאיימיל שלך.</string>
+    <string name="CheckEmailVerify">חשבון זה עדיין לא אומת, בבקשה בדוק את הקישור שנשלח לאימייל שלך ואמת את החשבון.</string>
+    <string name="EmailNotExist">האימייל לא קיים במערכת</string>
+    <string name="WrongPassword">סיסמה שגויה</string>
+    <string name="Home">ראשי</string>
+    <!-- ResetPassword Page -->
+    <string name="ForgotPasswordInfo" translatable="true">נא הזן את כתובת האימייל שברצונך לשחזר עבורו את הסיסמה</string>
+    <string name="ResetLink" translatable="true">קישור לאיפוס הסיסמה נשלח לאימייל.</string>
+    <!-- Home Page -->
+    <string name="SignOut" translatable="true">התנתק</string>
+    <string name="Teams" translatable="true">*קבוצה 1 הם שחקן 1 ושחקן 2. \n*קבוצה 2 הם שחקן 3 ושחקן 4.</string>
+    <string name="Won1" translatable="true">ניצח</string>
+    <string name="Won2" translatable="true">ניצחו</string>
+    <string name="Player" translatable="true">שחקן</string>
+    <string name="MoreThanOne" translatable="true">בחר משחק 1 ומעלה</string>
+    <string name="Player1" translatable="true">שחקן 1</string>
+    <string name="Player2" translatable="true">שחקן 2</string>
+    <string name="Player3" translatable="true">שחקן 3</string>
+    <string name="Player4" translatable="true">שחקן 4</string>
+    <string name="Games" translatable="true">משחקים</string>
+    <string name="Yes" translatable="true">כן</string>
+    <string name="No" translatable="true">לא</string>
+    <string name="AreYouSure" translatable="true">האם אתה בטוח שברצונך להתנתק?</string>
+    <string name="Game1vs1" translatable="true">משחק 1 נגד 1</string>
+    <string name="Game2vs2" translatable="true">משחק 2 נגד 2</string>
+</resources>

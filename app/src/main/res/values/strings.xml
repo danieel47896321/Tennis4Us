@@ -1,0 +1,55 @@
+<resources>
+    <!-- MainActivity Page -->
+    <string name="app_name">Tennis4Us</string>
+    <string name="Title">Title</string>
+    <string name="CreateAccount">Create Account</string>
+    <string name="SignIn">Sign In</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="ResetPasswordTitle" translatable="true">Reset password</string>
+    <string name="ResetPassword" translatable="true">Forgot password? Reset Password</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="Finish">Finish</string>
+    <string name="Required">Required</string>
+    <string name="Loading">Loading</string>
+    <string name="MinimumChars">Required minimum 6 chars</string>
+    <string name="InvalidEmail">Invalid Email</string>
+    <string name="InvalidPassword">Invalid Password</string>
+    <string name="EmailExist">Email exist in the system</string>
+    <string name="ErrorMSG">Something went wrong please try again in a few minutes.</string>
+    <string name="Error">Error</string>
+    <string name="OK">OK</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="CompleteCreateAccount">Successfully registered, Please verify your email with link sent to your email.</string>
+    <string name="CheckEmailVerify">This account not verify yet, please check the link sent to your email to verify this account.</string>
+    <string name="WrongPassword">Wrong Password</string>
+    <string name="EmailNotExist">Email not exist in the system</string>
+    <string name="Home">Home</string>
+    <!-- ResetPassword Page -->
+    <string name="ForgotPasswordInfo" translatable="true">Please enter the email address which you want to reset the password.</string>
+    <string name="ResetLink" translatable="true">Reset Link has been send to your Email.</string>
+    <!-- Home Page -->
+    <string name="SignOut" translatable="true">Sign Out</string>
+    <string name="Won1" translatable="true">Won</string>
+    <string name="Won2" translatable="true">Won</string>
+    <string name="Player" translatable="true">Player</string>
+    <string name="Teams" translatable="true">*Team 1 is Player 1 and Player 2.\n*Team 2 is Player 3 and Player 4.</string>
+    <string name="MoreThanOne" translatable="true">Pick 1+ game to play</string>
+    <string name="Player1" translatable="true">Player 1</string>
+    <string name="Player2" translatable="true">Player 2</string>
+    <string name="Player3" translatable="true">Player 3</string>
+    <string name="Player4" translatable="true">Player 4</string>
+    <string name="Games" translatable="true">Games</string>
+    <string name="Yes" translatable="true">Yes</string>
+    <string name="No" translatable="true">No</string>
+    <string name="AreYouSure" translatable="true">Are you sure you want to Sign Out?</string>
+    <string name="Game1vs1" translatable="true">Game 1 vs 1</string>
+    <string name="Game2vs2" translatable="true">Game 2 vs 2</string>
+    <!-- Arrays -->
+    <string-array name="HomeTagsName">
+        <item>@string/Game1vs1</item>
+        <item>@string/Game2vs2</item>
+    </string-array>
+</resources>

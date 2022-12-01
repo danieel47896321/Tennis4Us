@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Increase"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/increase"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/PlayerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/PlayerGame"
+                app:layout_constraintStart_toEndOf="@+id/Increase"
+                app:layout_constraintTop_toTopOf="@+id/Increase"
+                tools:text="Tag" />
+
+            <TextView
+                android:id="@+id/PlayerScore"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Increase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Increase" />
+
+            <TextView
+                android:id="@+id/PlayerGame"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Increase"
+                app:layout_constraintEnd_toStartOf="@+id/PlayerScore"
+                app:layout_constraintTop_toTopOf="@+id/Increase" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
