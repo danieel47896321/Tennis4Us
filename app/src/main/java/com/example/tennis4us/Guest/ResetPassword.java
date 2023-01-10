@@ -1,35 +1,27 @@
 package com.example.tennis4us.Guest;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import com.example.tennis4us.Class.Loading;
-import com.example.tennis4us.Class.PopUpMSG;
 import com.example.tennis4us.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.navigation.NavigationView;
+import com.example.tennis4us.controller.ResetPasswordController;
+import com.example.tennis4us.model.ResetPasswordModel;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.SignInMethodQueryResult;
 
 public class ResetPassword extends AppCompatActivity {
     private Button ButtonFinish;
     private TextInputLayout TextInputLayoutEmail;
     private ImageView BackIcon;
     private TextView Title;
-    private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-    private Loading loading;
+    private ProgressBar progressBar;
+    private ResetPasswordModel resetPasswordModel;
+    private ResetPasswordController resetPasswordController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,70 +29,39 @@ public class ResetPassword extends AppCompatActivity {
         init();
     }
     private void init(){
-        setID();
-        BackIcon();
-        EndIcon();
-        ResetPassword();
-    }
-    private void setID(){
+        resetPasswordModel = new ViewModelProvider(this).get(ResetPasswordModel.class);
+        resetPasswordController = new ResetPasswordController(resetPasswordModel, this);
         BackIcon = findViewById(R.id.BackIcon);
         Title = findViewById(R.id.Title);
-        Title.setText(R.string.ResetPasswordTitle);
+        progressBar = findViewById(R.id.progressBar);
         ButtonFinish = findViewById(R.id.ButtonFinish);
         TextInputLayoutEmail = findViewById(R.id.TextInputLayoutEmail);
+        resetPasswordController.setView();
+        BackIcon();
+        EndIcon();
+        ButtonFinish();
     }
-    private void EndIcon() {
-        TextInputLayoutEmail.setEndIconOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { Clear(TextInputLayoutEmail); }
-        });
-    }
-    private void Clear(TextInputLayout input){
-        input.setHelperText("");
-        input.getEditText().setText("");
-    }
-    private boolean isEmailValid(CharSequence email) { return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches(); }
-    private void ResetPassword(){
-        ButtonFinish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(TextInputLayoutEmail.getEditText().getText().length() > 0) {
-                    if(!isEmailValid(TextInputLayoutEmail.getEditText().getText().toString()))
-                        TextInputLayoutEmail.setHelperText(getResources().getString(R.string.InvalidEmail));
-                    else {
-                        loading = new Loading(ResetPassword.this);
-                        firebaseAuth.fetchSignInMethodsForEmail(TextInputLayoutEmail.getEditText().getText().toString()).addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
-                                loading.stop();
-                                if(task.isSuccessful()) {
-                                    if (!task.getResult().getSignInMethods().isEmpty()) {
-                                        FirebaseAuth.getInstance().sendPasswordResetEmail(TextInputLayoutEmail.getEditText().getText().toString());
-                                        new PopUpMSG(ResetPassword.this, getResources().getString(R.string.ResetPasswordTitle), getResources().getString(R.string.ResetLink), MainActivity.class);
-                                    } else
-                                        TextInputLayoutEmail.setHelperText(getResources().getString(R.string.EmailNotExist));
-                                }
-                                else
-                                    new PopUpMSG(ResetPassword.this,getResources().getString(R.string.Error),getResources().getString(R.string.ErrorMSG));
-                            }
-                        });
-                    }
-                }
-                else
-                    TextInputLayoutEmail.setHelperText(getResources().getString(R.string.Required));
-            }
-        });
-    }
-    private void BackIcon(){
-        BackIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { StartActivity(MainActivity.class); }
-        });
-    }
-    private void StartActivity(Class Destination){
+    public void setTitle(int title) { Title.setText(R.string.ResetPasswordTitle); }
+    private void BackIcon(){ BackIcon.setOnClickListener( v -> resetPasswordController.BackIcon() );}
+    private void EndIcon() { TextInputLayoutEmail.setEndIconOnClickListener( v -> resetPasswordController.ClearText() ) ;}
+    @Override
+    public void onBackPressed() { resetPasswordController.BackIcon(); }
+    public void StartActivity(Class Destination){
         startActivity(new Intent(ResetPassword.this, Destination));
         finish();
     }
-    @Override
-    public void onBackPressed() { StartActivity(MainActivity.class); }
+    public void Clear(String text){
+        if(TextInputLayoutEmail.getEditText() != null) {
+            TextInputLayoutEmail.setHelperText(text);
+            TextInputLayoutEmail.getEditText().setText(text);
+        }
+    }
+    private void ButtonFinish(){
+        ButtonFinish.setOnClickListener( v -> {
+            if(TextInputLayoutEmail.getEditText() != null)
+                resetPasswordController.ResetPassword(TextInputLayoutEmail.getEditText().getText().toString());
+        });
+    }
+    public void EmailHelperText(String text){ TextInputLayoutEmail.setHelperText(text); }
+    public void setProgressBar(int view){ progressBar.setVisibility(view); }
 }

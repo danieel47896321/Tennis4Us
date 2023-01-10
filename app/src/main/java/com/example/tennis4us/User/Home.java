@@ -2,7 +2,6 @@ package com.example.tennis4us.User;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,10 +15,8 @@ import android.widget.TextView;
 import com.example.tennis4us.Adapters.HomeAdapter;
 import com.example.tennis4us.Class.Tag;
 import com.example.tennis4us.Class.User;
-import com.example.tennis4us.Guest.MainActivity;
+import com.example.tennis4us.MainActivity;
 import com.example.tennis4us.R;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;

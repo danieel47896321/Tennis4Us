@@ -34,7 +34,7 @@
     <string name="SignOut" translatable="true">התנתק</string>
     <string name="Teams" translatable="true">*קבוצה 1 הם שחקן 1 ושחקן 2. \n*קבוצה 2 הם שחקן 3 ושחקן 4.</string>
     <string name="Won1" translatable="true">ניצח</string>
-    <string name="Won2" translatable="true">ניצחו</string>
+    <string name="Won2" translatable="true">ניצח</string>
     <string name="Player" translatable="true">שחקן</string>
     <string name="MoreThanOne" translatable="true">בחר משחק 1 ומעלה</string>
     <string name="Player1" translatable="true">שחקן 1</string>
